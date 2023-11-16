@@ -17,17 +17,21 @@ class BookSeeder extends Seeder
     {
 
         Book::truncate();
+//
+//        $faker = \Faker\Factory::create();
+//
+//        for ($i = 0; $i < 200; $i++) {
+//            Book::create([
+//                'title'  => $faker->sentence,
+//                'author' => $faker->name,
+//                'isbn'   => $faker->isbn10,
+//                'price'  => $faker->randomFloat(2, 10, 100),
+//                'stock'  => $faker->numberBetween(1, 100),
+//            ]);
+//        }
 
-        $faker = \Faker\Factory::create();
+        Book::factory()->count(2000)->create();
 
-        for ($i = 0; $i < 200; $i++) {
-            Book::create([
-                'title'  => $faker->sentence,
-                'author' => $faker->name,
-                'isbn'   => $faker->isbn10,
-                'price'  => $faker->randomFloat(2, 10, 100),
-                'stock'  => $faker->numberBetween(1, 100),
-            ]);
-        }
+
     }
 }
