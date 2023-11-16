@@ -42,7 +42,8 @@
         </div>
         <div class="form-group">
             <div class="col-sm-offset-2 col-sm-10">
-                <button type="submit" class="btn btn-primary">Submit</button>
+                <a href="{{route('books.index')}}" class="btn btn-danger"> <i class="bi bi-arrow-left"></i> Back</a>
+                <button type="submit" class="btn btn-primary"> Submit</button>
             </div>
         </div>
     </form>
